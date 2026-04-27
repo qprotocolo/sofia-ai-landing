@@ -1111,8 +1111,13 @@ footer small{font-size:.73rem;color:var(--t3);}
   });
 
   // FAB toggle
-  fab.addEventListener('click',toggle);
-  pClose.addEventListener('click',function(){setOpen(false);});
+fab.addEventListener('click', toggle);
+
+fab.addEventListener('touchstart', function(){
+  toggle();
+});
+
+pclose.addEventListener('click', function(){setOpen(false);});
 
   function toggle(){setOpen(!open);}
   function setOpen(v){
